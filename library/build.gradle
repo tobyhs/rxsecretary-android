@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 28
+    testOptions.unitTests.includeAndroidResources = true
 
     defaultConfig {
         minSdkVersion 19
@@ -29,4 +30,5 @@ dependencies {
     implementation 'com.github.tobyhs:rxsecretary:0.1.0'
 
     testImplementation 'junit:junit:4.12'
+    testImplementation 'org.robolectric:robolectric:4.1'
 }
