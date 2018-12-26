@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
+group = 'com.github.tobyhs'
+project.archivesBaseName = 'rxsecretary-android'
+version = '0.1.0'
+
 android {
     compileSdkVersion 28
     testOptions.unitTests.includeAndroidResources = true
@@ -9,7 +13,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "0.0.1"
+        versionName version
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
