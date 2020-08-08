@@ -6,12 +6,12 @@ project.archivesBaseName = 'rxsecretary-android'
 version = '0.1.0'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     testOptions.unitTests.includeAndroidResources = true
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName version
 
@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.github.tobyhs:rxsecretary:0.1.0'
 
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.robolectric:robolectric:4.1'
+    testImplementation 'org.robolectric:robolectric:4.3.1'
 }
 
 task sourcesJar(type: Jar) {
