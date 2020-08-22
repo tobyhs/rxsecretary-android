@@ -1,8 +1,10 @@
 package com.github.tobyhs.rxsecretary.android;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
 import org.robolectric.RobolectricTestRunner;
 
 import static org.hamcrest.CoreMatchers.is;

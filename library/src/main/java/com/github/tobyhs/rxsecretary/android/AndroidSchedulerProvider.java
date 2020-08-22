@@ -1,8 +1,9 @@
 package com.github.tobyhs.rxsecretary.android;
 
 import com.github.tobyhs.rxsecretary.BaseSchedulerProvider;
-import io.reactivex.Scheduler;
-import io.reactivex.android.schedulers.AndroidSchedulers;
+
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Scheduler;
 
 /**
  * An <a href="https://github.com/tobyhs/rxsecretary">RxSecretary</a> SchedulerProvider for Android
