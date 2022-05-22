@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 
 group = 'com.github.tobyhs'
-project.archivesBaseName = 'rxsecretary-android'
 version = '0.2.0'
 
 android {
@@ -16,7 +15,6 @@ android {
         versionName version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -38,11 +36,16 @@ dependencies {
     testImplementation 'org.robolectric:robolectric:4.8.1'
 }
 
-task sourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.sourceFiles
-}
-
-artifacts {
-    archives sourcesJar
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = group
+                artifactId = 'rxsecretary-android'
+                version = version
+            }
+        }
+    }
 }
